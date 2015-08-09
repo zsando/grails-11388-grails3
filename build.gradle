@@ -71,6 +71,13 @@ dependencies {
     testRuntime 'org.seleniumhq.selenium:selenium-htmlunit-driver:2.44.0'
 
     console "org.grails:grails-console"
+
+    // 20150808 first attempt
+//    compile "joda-time:joda-time:1.5"
+//    compile "org.jadira.usertype:usertype.jodatime:2.0.1"
+    
+    compile "joda-time:joda-time:2.8.1"
+    compile "org.jadira.usertype:usertype.core:4.0.0.GA"
 }
 
 task wrapper(type: Wrapper) {
