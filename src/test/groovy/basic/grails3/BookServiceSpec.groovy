@@ -23,7 +23,7 @@ class BookServiceSpec extends Specification {
     def cleanup() {
     }
 
-    @Ignore
+//    @Ignore
     void "test criteria query with DateTime clause"() {
         when:
             Book b1 = new Book(author: "Harper Lee", 

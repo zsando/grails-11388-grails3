@@ -74,11 +74,13 @@ dependencies {
     console "org.grails:grails-console"
 
     // 20150808 first attempt
-    compile "joda-time:joda-time:1.4"
-    compile "org.jadira.usertype:usertype.jodatime:2.0.1"
+//    compile "joda-time:joda-time:1.4"
+//    compile "org.jadira.usertype:usertype.jodatime:2.0.1"
     
-//    compile "joda-time:joda-time:2.8.1"
-//    compile "org.jadira.usertype:usertype.core:4.0.0.GA"
+    compile "joda-time:joda-time:2.8.1"
+    compile ("org.jadira.usertype:usertype.core:4.0.0.GA") {
+        exclude group:"org.hibernate", module: "hibernate-entitymanager"
+    }
     // as usertype.core brings in hibernate-entitymanager 4.3.8.Final, which mixes hibernate versions
 //    compile "org.hibernate:hibernate-entitymanager:4.3.10.Final" 
 }

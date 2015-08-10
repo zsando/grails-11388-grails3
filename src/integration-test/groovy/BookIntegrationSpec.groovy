@@ -10,7 +10,7 @@ import basic.grails3.Book
 @Rollback
 class BookIntegrationSpec extends Specification {
 
-    def "use DateTime clause in criteria query"() {
+    def "use DateTime clause in criteria query (integration)"() {
         given:
         Book b1 = new Book(pubDate: new DateTime(), author: "Harper Lee", title: "Go set a watchman")
         b1.save(failOnError: true, flush: true)
