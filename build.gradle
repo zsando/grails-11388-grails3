@@ -73,16 +73,28 @@ dependencies {
 
     console "org.grails:grails-console"
 
-    // 20150808 first attempt
+    /*
+     *  Earlier versions versions of joda-time and usertype. 
+     *  
+     *  These are reported to support unit test criteria queries in Grails 2.3.8
+     *  @see <a href="https://jira.grails.org/browse/GRAILS-11388">these comments</a>
+     *  
+     *  But the author finds that still unit test criteria queries in Grails 3.0.4
+     *  don't work.
+     */
 //    compile "joda-time:joda-time:1.4"
 //    compile "org.jadira.usertype:usertype.jodatime:2.0.1"
-    
+
+    /*
+     * Alternatively, the latest versions of joda-time and usertype are below.
+     * 
+     * NB that you need to exclude hibernate-entitymanager, or the hibernate
+     * session won't be initialised.
+     */
     compile "joda-time:joda-time:2.8.1"
     compile ("org.jadira.usertype:usertype.core:4.0.0.GA") {
         exclude group:"org.hibernate", module: "hibernate-entitymanager"
     }
-    // as usertype.core brings in hibernate-entitymanager 4.3.8.Final, which mixes hibernate versions
-//    compile "org.hibernate:hibernate-entitymanager:4.3.10.Final" 
 }
 
 task wrapper(type: Wrapper) {
