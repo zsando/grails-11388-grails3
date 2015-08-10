@@ -7,6 +7,7 @@ import org.joda.time.DateTime
 import org.joda.time.Days
 import org.joda.time.Weeks
 
+import spock.lang.Ignore
 import spock.lang.Specification
 
 /**
@@ -22,6 +23,7 @@ class BookServiceSpec extends Specification {
     def cleanup() {
     }
 
+    @Ignore
     void "test criteria query with DateTime clause"() {
         when:
             Book b1 = new Book(author: "Harper Lee", 
