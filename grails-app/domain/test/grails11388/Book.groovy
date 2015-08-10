@@ -1,4 +1,4 @@
-package basic.grails3
+package test.grails11388
 
 import org.joda.time.DateTime
 

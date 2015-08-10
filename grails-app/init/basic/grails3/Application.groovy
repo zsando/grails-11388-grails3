@@ -1,5 +1,6 @@
 package basic.grails3
 
+import basic.grails3.Application;
 import grails.boot.GrailsApp
 import grails.boot.config.GrailsAutoConfiguration
 

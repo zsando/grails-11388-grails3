@@ -1,10 +1,11 @@
+package test.grails11388
 import grails.test.mixin.integration.Integration
 import grails.transaction.Rollback
 
 import org.joda.time.DateTime
 
 import spock.lang.Specification
-import basic.grails3.Book
+import test.grails11388.Book;
 
 @Integration
 @Rollback
