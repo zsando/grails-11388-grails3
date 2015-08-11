@@ -1,16 +1,16 @@
 package test.grails11388
 
-import grails.test.mixin.TestFor
-
+import grails.test.mixin.TestMixin
+import grails.test.mixin.gorm.Domain
+import grails.test.mixin.hibernate.HibernateTestMixin
 import org.joda.time.DateTime
-
 import spock.lang.Specification
-import test.grails11388.Book;
 
 /**
  * See the API for {@link grails.test.mixin.domain.DomainClassUnitTestMixin} for usage instructions
  */
-@TestFor(Book)
+@Domain(Book)
+@TestMixin(HibernateTestMixin)
 class BookSpec extends Specification {
 
     def "use DateTime clause in criteria query (unit)"() {
